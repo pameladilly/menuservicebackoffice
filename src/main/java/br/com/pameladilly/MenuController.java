@@ -52,9 +52,10 @@ public class MenuController {
     @GET
     @Path("/getmenu/{idMenu}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getMenu(@PathParam("idMenu") String idMenu){
+    public MenuDTOResponse getMenu(@PathParam("idMenu") String idMenu){
 
-        return Response.ok(service.getMenu(idMenu)).build() ;
+        return service.getMenu(idMenu);
+
 
     }
 }

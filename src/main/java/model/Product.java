@@ -12,7 +12,10 @@ import java.util.List;
 @Setter
 @Getter
 @Entity
+
 public class Product extends PanacheEntity{
+
+    private Long id;
 
     private String name;
     private Boolean active;

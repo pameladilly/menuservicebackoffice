@@ -63,7 +63,8 @@ public class MenuService {
         dto.setName(menu.getName());
         dto.setProducts(new ArrayList<>());
         menu.getProduct().stream().filter(Product::getActive).forEach(product ->
-                 dto.getProducts().add( ProductDTO.builder().href(product.getHref()).position(product.getPosition()).name(product.getName()).build())
+
+                 dto.getProducts().add( ProductDTO.builder().id(product.getId()).href(product.getHref()).position(product.getPosition()).name(product.getName()).build())
         );
 
         return dto;

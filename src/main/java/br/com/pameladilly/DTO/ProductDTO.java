@@ -10,6 +10,7 @@ import lombok.*;
 @Builder
 public class ProductDTO {
 
+    private Long id;
     private String name;
     private String href;
     private Integer position;
